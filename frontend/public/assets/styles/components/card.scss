@@ -1,0 +1,120 @@
+.weather {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+
+  &__card {
+    width: 400px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    color: white;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-image: url(/frontend/public/assets/images/card-icon-144.png);
+      left: -30px;
+      top: -30px;
+      z-index: -1;
+      filter: blur(3px);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: translate(20px, 20px);
+    }
+  }
+
+  &__search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(32, 18, 163, 0.519);
+    color: white;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.736);
+    }
+
+    &:focus, &:hover {
+      background: rgba(66, 45, 255, 0.519);
+    }
+  }
+
+  &__button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff7e67;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+
+    &:hover {
+      background-color: #e66a58;
+      transform: scale(1.05);
+    }
+  }
+
+  &__info {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__city {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+  }
+
+  &__temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  &__condition {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

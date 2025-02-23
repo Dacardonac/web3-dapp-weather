@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Challenge to practice HTML, CSS, JS and APIs" />
+    <meta name="keywords" content="Frontend, Backend, Weather, API, HTML5, CSS3, JavaScript, JS, Vite, Web3, DApp, Sass, Scss, Challenge, Card, Daniel, Alejandro, Cano, Cardona" />
+    <meta name="author" content="Daniel Alejandro Cano Cardona" />
+    <meta name="designer" content="Daniel Alejandro Cano Cardona" />
+    <meta name="copyright" content="© 2025. All rights reserved" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="revisit-after" content="15days" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script defer type="module" src="./frontend/public/assets/scripts/main.js"></script>
+    <link rel="stylesheet" href="./frontend/public/assets/styles/main.scss">
+    <link rel="shortcut icon" href="./frontend/public/assets/images/weather-icon-32.png" type="image/x-icon">
+    <title>Weather DApp</title>
 </head>
-<body>
-  
+<body class="page">
+    <header class="header">
+        <h1 class="header__title">Weather App</h1>
+        <p class="header__paragraph">With this app you can know the weather in real time of the city you like</p>
+    </header>
+    <main class="weather">
+      <section class="weather__card">
+          <article class="weather__search">
+            <input type="text" class="weather__input" placeholder="Enter a city..." />
+            <button class="weather__button">Search</button>
+        </article>
+        <article class="weather__info">
+            <h2 class="weather__city">City 🌎</h2>
+            <p class="weather__temperature">--°C</p>
+            <p class="weather__condition">Condition: --</p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__attribution">
+        Coded by <a class="footer__attribution-link" href="https://github.com/Dacardonac" target="_blank">Daniel Alejandro Cano Cardona</a>.👨‍💻
+        </div>
+    </footer>
 </body>
 </html>

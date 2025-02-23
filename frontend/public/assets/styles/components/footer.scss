@@ -1,0 +1,27 @@
+.footer {
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+
+  &__attribution {
+    margin-top: 10px;
+    font-size: 0.9rem;
+
+    &-link {
+      text-decoration: none;
+      font-weight: 700;
+      color: #00aaff;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: #0084ff;
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: #e7e7e7;
+      }
+    }
+  }
+}
