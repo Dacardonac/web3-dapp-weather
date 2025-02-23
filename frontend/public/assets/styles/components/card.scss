@@ -15,19 +15,19 @@
     padding: 20px;
     border-radius: 12px;
     backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--card-bg);
+    border: 1px solid var(--card-hover);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     text-align: center;
-    color: white;
+    color: var(--white);
 
     &:hover {
       transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.2);
+      background: var(--card-hover);
     }
 
     &::before {
@@ -64,17 +64,17 @@
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: bold;
-    background: rgba(32, 18, 163, 0.519);
-    color: white;
+    background: var(--input-bg);
+    color: var(--white);
     outline: none;
     transition: background 0.3s ease-in-out;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.736);
+      color: var(--placeholder-color);
     }
 
     &:focus, &:hover {
-      background: rgba(66, 45, 255, 0.519);
+      background: var(--input-hover);
     }
   }
 
@@ -82,15 +82,15 @@
     padding: 10px 15px;
     border: none;
     border-radius: 6px;
-    background-color: #ff7e67;
-    color: white;
+    background-color: var(--btn-bg-color);
+    color: var(--white);
     font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease-in-out, transform 0.2s;
 
     &:hover {
-      background-color: #e66a58;
+      background-color: var(--btn-hover);
       transform: scale(1.05);
     }
   }
@@ -113,8 +113,8 @@
     margin: 5px 0;
   }
 
-  &__condition {
+  &__stats {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--stats-color);
   }
 }

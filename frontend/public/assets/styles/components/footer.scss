@@ -2,7 +2,7 @@
   font-size: 1rem;
   text-align: center;
   padding: 20px;
-  color: #fff;
+  color: var(--white);
 
   &__attribution {
     margin-top: 10px;
@@ -11,16 +11,16 @@
     &-link {
       text-decoration: none;
       font-weight: 700;
-      color: #00aaff;
+      color: var(--link-color);
       transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: #0084ff;
+        color: var(--link-hover);
         text-decoration: underline;
       }
 
       &:visited {
-        color: #e7e7e7;
+        color: var(--link-visited);
       }
     }
   }
