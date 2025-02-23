@@ -6,18 +6,18 @@
   font-family: "Roboto", sans-serif;
 
   &__card {
-    width: 400px;
-    height: 240px;
+    width: 25rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    border-radius: 12px;
-    backdrop-filter: blur(15px);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    backdrop-filter: blur(0.9375rem);
     background: var(--card-bg);
     border: 1px solid var(--card-hover);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -26,25 +26,25 @@
     color: var(--white);
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-0.3125rem);
       background: var(--card-hover);
     }
 
     &::before {
       content: "";
       position: absolute;
-      width: 150px;
-      height: 150px;
+      width: 9.375rem;
+      height: 9.375rem;
       background-image: url(/frontend/public/assets/images/card-icon-144.png);
-      left: -30px;
-      top: -30px;
+      left: -1.875rem;
+      top: -1.875rem;
       z-index: -1;
-      filter: blur(3px);
+      filter: blur(0.1875rem);
       transition: transform 0.5s ease-in-out;
     }
 
     &:hover::before {
-      transform: translate(20px, 20px);
+      transform: translate(1.25rem, 1.25rem);
     }
   }
 
@@ -59,9 +59,9 @@
 
   &__input {
     flex: 1;
-    padding: 10px;
+    padding: 0.625rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     font-size: 0.9rem;
     font-weight: bold;
     background: var(--input-bg);
@@ -79,9 +79,9 @@
   }
 
   &__button {
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     background-color: var(--btn-bg-color);
     color: var(--white);
     font-size: 0.9rem;
@@ -98,19 +98,19 @@
   &__info {
     width: 100%;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 
   &__city {
     font-weight: bold;
     font-size: 1.2rem;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.075rem;
   }
 
   &__temperature {
     font-size: 2rem;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 0.3125rem 0;
   }
 
   &__stats {
