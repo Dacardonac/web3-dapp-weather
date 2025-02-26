@@ -1,11 +1,7 @@
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    document.title = "Come back soon!";
-  } else {
-    document.title = "Weather DApp";
-  }
+  document.title = document.hidden ? "Come back soon!" : "Weather DApp";
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,27 +14,73 @@ document.addEventListener("DOMContentLoaded", () => {
   const feels_like = document.querySelector(".weather__feels-like");
   const condition = document.querySelector(".weather__condition");
 
-  button.addEventListener("click", async () => {
-      const city = input.value.trim();
-      if (!city) return alert("Please enter a city");
+  const fetchWeather = async () => {
+    const city = input.value.trim();
+    if (!city) {
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "error",
+        title: "Please enter a city!",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+      return;
+    }
 
-      try {
-          const response = await fetch(`http://localhost:3000/weather?city=${city}`);
-          const data = await response.json();
+    try {
+      const response = await fetch(`http://localhost:3000/weather?city=${city}`);
+      const data = await response.json();
 
-          if (response.status !== 200 || data.error) {
-              alert("City not found");
-              return;
-          }
-
-          cityName.textContent = data.name;
-          temperature.textContent = `${data.main.temp}°C`;
-          humidity.textContent = `Humidity: ${data.main.humidity}%`;
-          windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
-          feels_like.textContent = `Feels Like: ${data.main.feels_like}°C`;
-          condition.textContent = `Condition: ${data.weather[0].description}`;
-      } catch (error) {
-          console.error("Error fetching weather data:", error);
+      if (!response.ok || data.error) {
+        Swal.fire({
+          toast: true,
+          position: "top-end",
+          icon: "warning",
+          title: "City not found!",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+        });
+        return;
       }
+
+      cityName.textContent = data.name;
+      temperature.textContent = `${data.main.temp}°C`;
+      humidity.textContent = `Humidity: ${data.main.humidity}%`;
+      windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
+      feels_like.textContent = `Feels Like: ${data.main.feels_like}°C`;
+      condition.textContent = `Condition: ${data.weather[0].description}`;
+
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "success",
+        title: "City found!",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+      });
+    } catch (error) {
+      console.error("Error fetching weather data:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Error fetching data",
+        toast: true,
+        position: "top-right",
+        timer: 3000,
+        showConfirmButton: false,
+      });
+    } finally {
+      input.value = "";
+    }
+  };
+
+  button.addEventListener("click", fetchWeather);
+  input.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+      fetchWeather();
+    }
   });
 });
