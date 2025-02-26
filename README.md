@@ -35,7 +35,7 @@ Weather DApp is a modern and efficient web application that allows you to access
 
 ## Local Installation and Execution ⚡
 
-Follow these steps to run Weather DApp in your local environment:
+Follow these steps to run Weather DApp in your **local environment**:
 
 1.  **Clone the repository:**
 
@@ -71,7 +71,7 @@ Follow these steps to run Weather DApp in your local environment:
 
 Weather DApp is deployed on Vercel, ensuring fast and reliable access from anywhere in the world.
 
-* Application link: **[Weather DApp on Vercel]()**
+* Application link: **[Weather DApp on Vercel](https://web3-dapp-weather.vercel.app/)**
 
 ## How to Use Weather DApp 📄
 
@@ -82,7 +82,7 @@ Weather DApp is deployed on Vercel, ensuring fast and reliable access from anywh
 
 ## Screenshots / Design ️📷
 
-
+![Desktop Design](./frontend/public/assets/images/desktop-design.webp)
 
 ## Author ✍️
 ### Daniel Alejandro Cano Cardona
@@ -99,8 +99,8 @@ This project is under the **MIT License**. See the **[`LICENSE`](./LICENSE)** fi
 
 ## Credits 🙌
 
-* Icons: [Icons8](https://icons8.com/)
+* Icons: **[Icons8](https://icons8.com/)**
 
-Thank you for visiting Weather DApp!
+**Thank you for visiting Weather DApp!**
 
-Let me know if you want to make any more changes or add information. 🚀😃
+**Let me know if you want to make any more changes or add information. 🚀😃**
