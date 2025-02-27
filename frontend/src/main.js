@@ -1,5 +1,5 @@
 import Swal from "sweetalert2";
-import "/assets/styles/main.scss";
+import "../public/assets/styles/main.scss";
 
 
 document.addEventListener("visibilitychange", () => {
