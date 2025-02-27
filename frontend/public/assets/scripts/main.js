@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const feels_like = document.querySelector(".weather__feels-like");
   const condition = document.querySelector(".weather__condition");
 
+  const API_URL = "https://web3-dapp-weather-production.up.railway.app/"
+
   const fetchWeather = async () => {
     const city = input.value.trim();
     if (!city) {
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/weather?city=${city}`);
+      const response = await fetch(`${API_URL}weather?city=${city}`);
       const data = await response.json();
 
       if (!response.ok || data.error) {
