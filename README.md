@@ -22,6 +22,10 @@ Weather DApp is a modern and efficient web application that allows you to access
 
 * **Performance optimization 🎉:** Good practices have been implemented so that the application has the best possible performance.
 
+* **Code Quality and Readability 📚:** The code is well-structured, readable, and follows best practices, making it easy to maintain and extend.
+
+* **API Integration 🌐:** The application uses a reliable API to fetch real-time weather data.
+
 ## Technologies Used ️🛠️
 
 * HTML5
@@ -101,6 +105,8 @@ This project is under the **MIT License**. See the **[`LICENSE`](./LICENSE)** fi
 ## Credits 🙌
 
 * Icons: **[Icons8](https://icons8.com/)**
+* Vercel: **[Vercel](https://vercel.com/)**
+* Railway: **[Railway](https://railway.app/)**
 
 **Thank you for visiting Weather DApp!**
 
