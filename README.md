@@ -31,7 +31,8 @@ Weather DApp is a modern and efficient web application that allows you to access
 * SweetAlert2
 * Fetch API
 * Git & GitHub
-* Vercel (for deployment)
+* Vercel (for deployment frontend)
+* Railway (for deployment backend)
 
 ## Local Installation and Execution ⚡
 
